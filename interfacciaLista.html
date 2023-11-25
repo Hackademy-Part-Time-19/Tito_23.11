@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // esercizio n.1
+
+        let lista = []
+
+        let operazione = parseInt(prompt(" Benvenuto \n\n Premi 1 per aggiungere elementi alla tua lista della spesa\n\n Premi 2 per rimuovere elementi dalla lista\n\n Premi 3 per ordinare la tua lista\n\n Premi 4 per modificare un elemento dalla tua lista\n\n Premi 5  per eliminare l'intera lista\n\n Premi 6 per visualizzare la tua lista\n\n Premi 0 per uscire"));
+
+        function stampaLista() {
+
+            let stampaLista = "La tua lista è composta da: \n"
+
+            lista.forEach(element => {
+                stampaLista += " " + element + "\n"
+            });
+
+            alert(stampaLista)
+
+        }
+        while (operazione != 0) {
+
+            switch (operazione) {
+
+                case 1:
+
+                    let elemento = prompt("Inserisci gli elementi della tua lista");
+
+                    lista.push(elemento);
+
+                    alert("Ha aggiunto " + elemento + " alla tua lista")
+
+                    stampaLista()
+
+                    break;
+
+                case 2:
+
+                    let elementoDaRimuovere = prompt("Inserisci l'elemento da rimuovere");  
+
+                    let posizioneDaRimuovere = lista.indexOf(elementoDaRimuovere)
+
+                    if (posizioneDaRimuovere != -1) {
+
+                        lista.splice(posizioneDaRimuovere, 1);
+
+                        alert("Hai rimosso " + elementoDaRimuovere + " dalla tua lista");
+
+                        stampaLista()
+
+                    } else {
+
+                        alert("Elemento non presente nella lista");
+
+                    }
+
+                    break;
+
+                case 3:
+
+                    lista.sort();
+
+                    alert("La tua lista è stata ordinata");
+
+                    stampaLista()
+
+                    break;
+
+                case 4:
+
+                    let elementoDaModificare = prompt("Inserisci l'elemento da modificare");
+
+                    let posizioneDaModificare = lista.indexOf(elementoDaModificare)
+
+                    if (posizioneDaModificare != -1) {
+
+                        let nuovoElemento = prompt("Inserisci il nuovo elemento");
+
+                        lista[posizioneDaModificare] = nuovoElemento;
+
+                        alert("Hai modificato " + elementoDaModificare + " con " + nuovoElemento);
+
+                        stampaLista()
+
+                    } else {
+
+                        alert("Elemento non presente nella lista");
+
+                    }
+
+                    break;
+
+                case 5:
+
+                    lista = [];
+
+                    alert("Hai eliminato la tua lista");
+
+                    break;
+
+                case 6:
+
+                  stampaLista()
+
+                    break;
+
+                case 0:
+
+                    alert("Grazie per aver utilizzato la nostra app");
+
+                    break;
+
+                default:
+
+                    alert("Operazione non valida");
+
+                    break;
+            }
+
+            operazione = parseInt(prompt(" Benvenuto \n\n Premi 1 per aggiungere elementi alla tua lista della spesa\n\n Premi 2 per rimuovere elementi dalla lista\n\n Premi 3 per ordinare la tua lista\n\n Premi 4 per modificare un elemento dalla tua lista\n\n Premi 5  per eliminare l'intera lista\n\n Premi 6 per visualizzare la tua lista\n\n Premi 0 per uscire"));
+        }
+
+    </script>
+</body>
+
+</html>
