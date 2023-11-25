@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
 </head>
 
 <body>
@@ -12,122 +14,176 @@
 
         // esercizio n.1
 
-        let lista = []
+        // let lista = []
 
-        let operazione = parseInt(prompt(" Benvenuto \n\n Premi 1 per aggiungere elementi alla tua lista della spesa\n\n Premi 2 per rimuovere elementi dalla lista\n\n Premi 3 per ordinare la tua lista\n\n Premi 4 per modificare un elemento dalla tua lista\n\n Premi 5  per eliminare l'intera lista\n\n Premi 6 per visualizzare la tua lista\n\n Premi 0 per uscire"));
+        // let operazione = parseInt(prompt(" Benvenuto \n\n Premi 1 per aggiungere elementi alla tua lista della spesa\n\n Premi 2 per rimuovere elementi dalla lista\n\n Premi 3 per ordinare la tua lista\n\n Premi 4 per modificare un elemento dalla tua lista\n\n Premi 5  per eliminare l'intera lista\n\n Premi 6 per visualizzare la tua lista\n\n Premi 0 per uscire"));
 
-        function stampaLista() {
+        // function stampaLista() {
 
-            let stampaLista = "La tua lista è composta da: \n"
+        //     let stampaLista = "La tua lista è composta da: \n"
 
-            lista.forEach(element => {
-                stampaLista += " " + element + "\n"
-            });
+        //     lista.forEach(element => {
+        //         stampaLista += " " + element + "\n"
+        //     });
 
-            alert(stampaLista)
+        //     alert(stampaLista)
 
-        }
-        while (operazione != 0) {
+        // }
+        // while (operazione != 0) {
 
-            switch (operazione) {
+        //     switch (operazione) {
 
-                case 1:
+        //         case 1:
 
-                    let elemento = prompt("Inserisci gli elementi della tua lista");
+        //             let elemento = prompt("Inserisci gli elementi della tua lista");
 
-                    lista.push(elemento);
+        //             lista.push(elemento);
 
-                    alert("Ha aggiunto " + elemento + " alla tua lista")
+        //             alert("Ha aggiunto " + elemento + " alla tua lista")
 
-                    stampaLista()
+        //             stampaLista()
 
-                    break;
+        //             break;
 
-                case 2:
+        //         case 2:
 
-                    let elementoDaRimuovere = prompt("Inserisci l'elemento da rimuovere");  
+        //             let elementoDaRimuovere = prompt("Inserisci l'elemento da rimuovere");  
 
-                    let posizioneDaRimuovere = lista.indexOf(elementoDaRimuovere)
+        //             let posizioneDaRimuovere = lista.indexOf(elementoDaRimuovere)
 
-                    if (posizioneDaRimuovere != -1) {
+        //             if (posizioneDaRimuovere != -1) {
 
-                        lista.splice(posizioneDaRimuovere, 1);
+        //                 lista.splice(posizioneDaRimuovere, 1);
 
-                        alert("Hai rimosso " + elementoDaRimuovere + " dalla tua lista");
+        //                 alert("Hai rimosso " + elementoDaRimuovere + " dalla tua lista");
 
-                        stampaLista()
+        //                 stampaLista()
 
-                    } else {
+        //             } else {
 
-                        alert("Elemento non presente nella lista");
+        //                 alert("Elemento non presente nella lista");
 
-                    }
+        //             }
 
-                    break;
+        //             break;
 
-                case 3:
+        //         case 3:
 
-                    lista.sort();
+        //             lista.sort();
 
-                    alert("La tua lista è stata ordinata");
+        //             alert("La tua lista è stata ordinata");
 
-                    stampaLista()
+        //             stampaLista()
 
-                    break;
+        //             break;
 
-                case 4:
+        //         case 4:
 
-                    let elementoDaModificare = prompt("Inserisci l'elemento da modificare");
+        //             let elementoDaModificare = prompt("Inserisci l'elemento da modificare");
 
-                    let posizioneDaModificare = lista.indexOf(elementoDaModificare)
+        //             let posizioneDaModificare = lista.indexOf(elementoDaModificare)
 
-                    if (posizioneDaModificare != -1) {
+        //             if (posizioneDaModificare != -1) {
 
-                        let nuovoElemento = prompt("Inserisci il nuovo elemento");
+        //                 let nuovoElemento = prompt("Inserisci il nuovo elemento");
 
-                        lista[posizioneDaModificare] = nuovoElemento;
+        //                 lista[posizioneDaModificare] = nuovoElemento;
 
-                        alert("Hai modificato " + elementoDaModificare + " con " + nuovoElemento);
+        //                 alert("Hai modificato " + elementoDaModificare + " con " + nuovoElemento);
 
-                        stampaLista()
+        //                 stampaLista()
 
-                    } else {
+        //             } else {
 
-                        alert("Elemento non presente nella lista");
+        //                 alert("Elemento non presente nella lista");
 
-                    }
+        //             }
 
-                    break;
+        //             break;
 
-                case 5:
+        //         case 5:
 
-                    lista = [];
+        //             lista = [];
 
-                    alert("Hai eliminato la tua lista");
+        //             alert("Hai eliminato la tua lista");
 
-                    break;
+        //             break;
 
-                case 6:
+        //         case 6:
 
-                  stampaLista()
+        //           stampaLista()
 
-                    break;
+        //             break;
 
-                case 0:
+        //         case 0:
 
-                    alert("Grazie per aver utilizzato la nostra app");
+        //             alert("Grazie per aver utilizzato la nostra app");
 
-                    break;
+        //             break;
 
-                default:
+        //         default:
 
-                    alert("Operazione non valida");
+        //             alert("Operazione non valida");
 
-                    break;
-            }
+        //             break;
+        //     }
 
-            operazione = parseInt(prompt(" Benvenuto \n\n Premi 1 per aggiungere elementi alla tua lista della spesa\n\n Premi 2 per rimuovere elementi dalla lista\n\n Premi 3 per ordinare la tua lista\n\n Premi 4 per modificare un elemento dalla tua lista\n\n Premi 5  per eliminare l'intera lista\n\n Premi 6 per visualizzare la tua lista\n\n Premi 0 per uscire"));
-        }
+        //     operazione = parseInt(prompt(" Benvenuto \n\n Premi 1 per aggiungere elementi alla tua lista della spesa\n\n Premi 2 per rimuovere elementi dalla lista\n\n Premi 3 per ordinare la tua lista\n\n Premi 4 per modificare un elemento dalla tua lista\n\n Premi 5  per eliminare l'intera lista\n\n Premi 6 per visualizzare la tua lista\n\n Premi 0 per uscire"));
+        // }
+
+
+
+        // esercizio n.2
+
+        // function filtraNumeriPari(array) {
+
+        //     let arrayPari = []
+
+        //     let arrayFiltrato = array.filter((element) => {
+
+        //         if (element % 2 == 0) {
+
+        //             arrayPari.push(element)
+        //         }
+
+        //     });
+
+        //     return arrayPari
+
+        // }
+
+        // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // let arrayPari = filtraNumeriPari(array)
+
+        // console.log(arrayPari)
+
+
+
+        // esercizio n.3
+
+        // let array1 = ["cane", "gatto", "topo", "leone", "cavallo"]
+
+        // let array2 = ["bici", "moto", "auto", "camion", "treno"]
+
+        // function filtraPerLunghezza(array1, array2, lunghezza) {
+
+        //     let arrayFiltrato = array1.concat(array2).filter((element) => {
+
+        //         if (element.length > lunghezza) {
+
+        //             return element
+        //         }
+        //     });
+
+        //     return arrayFiltrato
+
+        // }
+
+        // let arrayFiltrato = filtraPerLunghezza(array1, array2, 5)
+
+        // console.log(arrayFiltrato)
+
 
     </script>
 </body>
